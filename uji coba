@@ -1,0 +1,79 @@
+# class_dan_object.py
+
+# 1. Class dan Object
+class Universitas:
+    pass
+
+class Mahasiswa:
+    pass
+
+universitas1 = Universitas()
+universitas2 = Universitas()
+
+print("=== DATA UNIVERSITAS ===")
+print(type(universitas1))
+print(type(universitas2))
+
+mahasiswa1 = Mahasiswa()
+mahasiswa2 = Mahasiswa()
+print(type(mahasiswa1))
+print(type(mahasiswa2))
+
+
+# 2. Instance Attribute
+print("\n=== INSTANCE ATTRIBUTE ===")
+mahasiswa1 = Mahasiswa()
+mahasiswa1.nim = 14022500135
+mahasiswa1.nama = "Naila"
+mahasiswa1.jurusan = "Sistem Informasi"
+
+print("NIM:", mahasiswa1.nim)
+print("Nama:", mahasiswa1.nama)
+print("Jurusan:", mahasiswa1.jurusan)
+
+mahasiswa2 = Mahasiswa()
+mahasiswa2.nim = 14022500110
+mahasiswa2.nama = "Budi"
+mahasiswa2.jurusan = "Sistem Informasi"
+
+print("\nNIM:", mahasiswa2.nim)
+print("Nama:", mahasiswa2.nama)
+print("Jurusan:", mahasiswa2.jurusan)
+
+
+# 3. Class Attribute
+print("\n=== CLASS ATTRIBUTE ===")
+class Universitas:
+    nama = "Universitas Indonesia"
+    alamat = "Depok"
+
+print("Nama Kampus:", Universitas.nama)
+print("Alamat Kampus:", Universitas.alamat)
+
+
+# 4. Method
+print("\n=== PERKENALAN MAHASISWA ===")
+class Mahasiswa:
+    nim = 0
+    nama = ""
+
+    def perkenalan(self):
+        print(f"Halo, nama saya {self.nama}")
+        print(f"NIM saya {self.nim}")
+
+    def hello(self, teman):
+        print(f"Halo {teman}, salam kenal dari {self.nama}")
+
+mahasiswa1 = Mahasiswa()
+mahasiswa1.nim = 14022500135
+mahasiswa1.nama = "Naila"
+
+mahasiswa2 = Mahasiswa()
+mahasiswa2.nim = 14022500110
+mahasiswa2.nama = "Budi"
+
+mahasiswa1.perkenalan()
+mahasiswa1.hello("Budi")
+print()
+mahasiswa2.perkenalan()
+mahasiswa2.hello("Naila")
